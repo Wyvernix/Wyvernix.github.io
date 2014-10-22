@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='res/normalize.css' rel='stylesheet' type='text/css'>
+	<title>Twitch Mousepad Project</title>
+	<style>
+	body {
+  		font-family: helvetica, sans-serif;
+  		margin: 0 auto;
+  		max-width: 700px;
+  		background-size: cover;
+  		background-attachment:fixed;
+  		text-align: center;
+	}
+	div {
+  		/*height: 200px;*/
+  		/*background-size: cover;*/
+  		position: relative;
+  		margin: 40px 0 0 0;
+  		border-radius: 12px;
+	}
+	p {
+		color: #222222;
+	}
+	img {
+		max-width:600px;
+		/*max-height:228px*/
+	}
+	h2 {
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<br /><br />
+	<h1>Instructions!</h1>
+	<div>
+	  	<p>Go to <a href="http://www.artscow.com">artscow.com</a> and click on login. And make a new account.<br />
+	  		You will need to verify your account.<br /><br />
+	  		
+	  		Once that's all done, go to <a href="http://www.artscow.com/photo-gifts/-160">Large Mousepad</a> and click on "CREATE IT"<br /><br />
+	  		
+	  		I have graciously made some <a href="designs.html">images</a> for you to use. But if you want to make your own, use a 950x800 image at 100dpi. <a href="pads/template.png">HERE</a>s a template. The images I made already account for the possible cropping that may occur.<br /><br />
+
+	  		Add it to cart and stuff... When you get to a page like this:<br />
+
+	  		<img src="res/image1.png" alt="image1"><br /><br />
+
+	  		...you want to put in the coupon for $1. Coupon is<br /><br />
+	  		<h2>GETONEDOLLAR</h2><br />
+	  		Hit apply and fill out the rest and you should be good. Product and shipping should be only $1! <br /><br />
+	  		Enjoy!
+	  		<br /><br />
+	  		PS: heres the one i got: <a href="https://twitter.com/Shady1765/status/496861664638406656">link</a>
+	  		<br /><br /><br /><br /><br />
+	  		PPS: I think the coupon will eventually expire, but whatever.
+		</p>
+	</div>
+	<br /><br />
+	<a href="index.html">RETURN</a><br />
+	<p style="font-size:10px">@Shady1765</p>
+</body></html>

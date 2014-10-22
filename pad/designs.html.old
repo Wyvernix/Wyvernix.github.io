@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='res/normalize.css' rel='stylesheet' type='text/css'>
+	<title>Twitch Mousepad Project</title>
+	<style>
+	body {
+  		font-family: helvetica, sans-serif;
+  		margin: 0 auto;
+  		max-width: 400px;
+  		background-size: cover;
+  		background-attachment:fixed;
+  		text-align: center;
+	}
+	div {
+  		/*height: 200px;*/
+  		/*background-size: cover;*/
+  		position: relative;
+  		margin: 40px 0 0 0;
+  		border-radius: 12px;
+	}
+	p {
+		color: #222222;
+	}
+	img {
+		max-width:400px;
+		/*max-height:290px*/
+	}
+	.imga {
+		border-radius: 12px;
+	}
+	</style>
+</head>
+<body>
+	<br /><br />
+	<h1>Designs!</h1>
+	
+	<a href="pads/chuu_chuu.png">
+		<div>
+			<img src="pads/chuu_chuu.png" class="imga">
+		  	<p>chuu chuu
+			</p>
+		</div>
+	</a>
+	<a href="pads/ice_fairy.png">
+		<div>
+			<img src="pads/ice_fairy.png" class="imga">
+		  	<p>ice_fairy
+			</p>
+		</div>
+	</a>
+	<a href="pads/baka.png">
+		<div>
+			<img src="pads/baka.png" class="imga">
+		  	<p>baka
+			</p>
+		</div>
+	</a>
+	<a href="pads/cirdad.png" alt="cirdad">
+		<div>
+			<img src="pads/cirdad.png" class="imga">
+		  	<p>cirdad
+			</p>
+		</div>
+	</a>
+	<a href="pads/kyou.png">
+		<div>
+			<img src="pads/kyou.png" class="imga">
+		  	<p>kyou
+			</p>
+		</div>
+	</a>
+	<a href="pads/alien.png">
+		<div>
+			<img src="pads/alien.png" class="imga">
+		  	<p>alien
+			</p>
+		</div>
+	</a>
+	<a href="pads/kyoukai.png">
+		<div>
+			<img src="pads/kyoukai.png" class="imga">
+		  	<p>kyoukai
+			</p>
+		</div>
+	</a>
+	<a href="pads/oh.png">
+		<div>
+			<img src="pads/oh.png" class="imga">
+		  	<p>timOh
+			</p>
+		</div>
+	</a>
+	<br /><br />
+	<p>Want to share your design? Send a PM to shady1765 @ twitch
+	</p>
+	<br /><br /><br />
+	<a href="index.html">RETURN</a><br />
+	<p style="font-size:10px">@Shady1765</p>
+</body></html>

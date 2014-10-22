@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='res/normalize.css' rel='stylesheet' type='text/css'>
+	<title>Twitch Mousepad Project</title>
+	<style>
+	body {
+  		font-family: helvetica, sans-serif;
+  		margin: 0 auto;
+  		max-width: 800px;
+  		background: #000000;
+  		background-size: cover;
+  		background-attachment:fixed;
+	}
+	div {
+  		height: 200px;
+  		background-size: cover;
+  		position: relative;
+  		margin: 40px 0 0 0;
+  		border-radius: 12px;
+	}
+	h1 {
+	  	text-align: center;
+	  	font-size: 70px;
+	  	color: #aaaaaa;
+	  	margin: 60px 0 0 0;
+	}
+	h2 {
+	  	text-align: center;
+	  	color: #bbbbbb;
+	  	margin: 0px 0 70px 0;
+	}
+	p {
+		color: #222222;
+		border-radius: 6px;
+	  	background: black;
+	  	background: linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,.6));
+  		background: -webkit-linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,.6));
+  		background: -moz-linear-gradient(bottom, rgba(255,255,255,1), rgba(255,255,255,.6));
+  		/*width: 800px;*/
+	  	padding: 10px;
+	  	font-size: 32px;
+	  	font-weight:bold;
+	  	line-height: 28px;
+	  	text-align: left;
+	  	position: absolute;
+	  	bottom: 0;
+	  	margin: 0;
+	  	height: 30px;
+	}
+	.para {
+	  	font-weight:normal;
+	  	font-size: 28px;
+	  	line-height: 24px;
+	  	height: 200px;
+	}
+	</style>
+</head>
+<body>
+	<h1>Twitch Mousepad Project</h1>
+	<div>
+		  	<p class="para">Here be instructions for getting a one dollar mousepad (includes shipping). 
+		  		Mousepad designs are provided, and should be the reason you are here. :P<br /><br />
+		  		If you want to use your own design... whatever. 
+		  		im tired of css, the rest of the pages will be white.<br /><br />
+		  		CONTINUE!!!
+		  	</p>
+	</div>
+	<a href="instructions.html">
+		<div class="one">
+		  	<p>Instructions
+		  	</p>
+		</div>
+	</a>
+	<a href="designs.html">
+		<div class="two">
+			<p>List of designs
+			</p>
+		</div>
+	</a>
+	<br /><br /><br />
+</body>
+</html>
