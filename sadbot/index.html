@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='../res/normalize.css' rel='stylesheet' type='text/css'>
+	<link href='../res/page.css' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="../favicon.png" />
+	<title>SadBot Help</title>
+	<style>
+	p {
+		text-align: left;
+
+	}
+	.project {
+		color: black;
+	}
+	.code {
+		font-family: "Courier New", Courier, monospace;
+		padding-left: 20px;
+	}
+	</style>
+</head>
+<body>
+	<br /><br />
+	<h1>SadBot Help</h1>
+	<div>
+		  	<p class="para">
+		  		I am a bot for Twitch!!<br>
+		  		I do stuff.<br>
+		  		Most commands are lowercase...
+		  	</p>
+	</div>
+	<br />
+	
+	<h2>Projects:</h2>
+	<div>
+		<h3>Syntax</h3>
+		<p class="code">&lt;param&gt;
+		</p><p>Required
+		</p>
+		<p class="code">[param]
+		</p><p>Optional
+		</p>
+		<p class="code">a|b
+		</p><p>Choose one
+		</p>
+	</div><br /><br />
+
+	<div>
+		<h3>Basic Commands</h3>
+		<p class="code">!wyvnet
+		</p><p>&gt;Build server: wyv.mcph.co[1.7.4]
+		</p>
+		<p class="code">!commands
+		</p><p>Lists some of the common commands
+		</p>
+		<p class="code">!quote [# | list]<br>
+			!quote &lt;add | remove&gt; &lt;quote&gt;
+		</p><p>Viewers can view and add quotes. Mod+ can remove
+		</p>
+		<p class="code">!viewers
+		</p><p>Returns the number of viewers in chat (excluding itself)
+		</p>
+
+		<h3>The !ip command</h3>
+		<p>The ip command returns different ips depending on what server you are on. It will check the title of the broadcast for certain tags. The current ip will be updated every 5 minutes, and on demand.</p>
+		<p class="code">!ip [servertag]
+		</p><p>Returns the current ip (or matching ip if found)
+		</p>
+		<p class="code">!ip list
+		</p><p>Lists triggers (server tags)
+		</p>
+		<p class="code">!ip add &lt;trigger&gt; &lt;ip&gt;
+		</p><p>Trigger is the server name, eg. "mineplex". ip is the ip of the server, eg. "us.mineplex.com"<br />
+			The trigger can be a RegEx. note: will be added as ".*?trigger.*?"
+		</p>
+		<p class="code">!!ip remove &lt;trigger&gt;
+		</p><p>Removes the ip/trigger from the database
+		</p>
+
+		<h3>Chat Fun commands</h3>
+		<p class="code">!poll
+		</p><p>&gt;i am lazy brb...
+		</p>
+	</div><br /><br />
+	
+	<br /><br /><br />
+	<p style="font-size:14px; text-align:center"><a href="../index.html">RETURN</a></p>
+	<p style="font-size:10px; text-align:center">@Shady1765</p>
+</body></html>

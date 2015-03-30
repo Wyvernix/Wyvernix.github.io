@@ -1,0 +1,54 @@
+body {
+	font-family: helvetica, sans-serif;
+	margin: 0 auto;
+	max-width: 700px;
+	color: #FFFFFF;
+	background-color: rgb(50,50,50);
+	background-size: cover;
+	background-attachment:fixed;
+	text-align: center;
+}
+div {
+	/*height: 200px;*/
+	/*background-size: cover;*/
+	position: relative;
+	margin: 40px 0 0 0;
+	border-radius: 12px;
+}
+p {
+	color: #DDDDDD;
+}
+img {
+	max-width:600px;
+	/*max-height:228px*/
+}
+h1 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 42px;
+	color: rgb(101,125,230);
+}
+h2 {
+	font-size: 24px;
+}
+a:link {
+    color: #00DDDD;
+}
+
+/* visited link */
+a:visited {
+    color: #00BBBB;
+}
+
+/* mouse over link */
+a:hover {
+    color: #AABBBB;
+}
+
+/* selected link */
+a:active {
+    color: #00BBBB;
+}
+.imga {
+	max-width:400px;
+	border-radius: 12px;
+}
