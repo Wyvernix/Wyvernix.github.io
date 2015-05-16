@@ -4,10 +4,17 @@
 <head>
 <meta charset="utf-8">
 <title> Running Sellout%</title>
-<link rel="icon" href="/img/yv.ico" type="image/x-icon" />
+<link rel="icon" href="img/yv.ico" type="image/x-icon" />
+<script src="/res/tracking.js"></script>
 <style type="text/css">
 body {
-	background-color: #CEF6CE;
+	/*background-image: url("gaben.png");*/
+	/*background-position: center center;*/
+	/*background-repeat: no-repeat;*/
+	/*background-attachment: fixed;*/
+	background-color: #ABFFA9;
+	cursor:url(Pointer.gif) 16 16,auto;
+	
 }
 #mainContent {
 	font-family: Arial, Helvetica, sans-serif;
@@ -18,8 +25,25 @@ body {
 	padding: 10px;
 	text-align: center;
 }
+.yv{
+	position: relative;
+    left: -220px;
+    top: -325px;
+	
+}
+.yv2{
+	position: relative;
+	left: 220px;
+	top: -325px;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
 .buttonStyle {
-	border-radius: 100px;
+	border-radius: 10px;
 	border: 2px solid #DF0101;
 	padding: 10px;
 	margin: 8px auto;
@@ -44,10 +68,10 @@ body {
 }
 .formStyle {
 	border-radius: 8px;
-	border: thin solid #0A2A0A;
+	border: 2px solid #0A2A0A;
 	padding: 5px;
 	margin: 20px auto;
-	background-color: #E3F6CE;
+	background-color: #6FB653;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	color: #0A2A0A;
@@ -72,7 +96,10 @@ body {
 	<button id="clickMe" class="buttonStyle" type="button">Calculate!</button>
 	
 </form>
-<img src="/img/YV_Passive_Win.gif" />
+<img src="img/YV_Passive_Win.gif" /><br>
+
+<img class="yv" src="img/Yv_counting.gif" />
+<img class="yv2" src="img/Yv_counting.gif" /><br>
 </div>
 
 <script> 
@@ -91,12 +118,31 @@ function doSomething() {
     	return;
     }
     
-    var views = (viewers * 0.4) * ((hours*60) / displacement * ads + 4)
-    var revenue = (views * streams) / 1000 * 3.5
-    revenue = Math.round(revenue*100)/100;
+    var views = (viewers * 0.4) * ((hours*60) / displacement * ads + 4);
+    var revenue = (views * streams) / 1000 * 3.5;
     
-    document.getElementById("fillup").innerHTML = "$"+revenue+" per week";
+    
+    var monthrev = revenue / 7 * 30;
+    var yearrev = revenue / 7 * 365;
+    
+    monthrev = roundTwo(monthrev);
+    yearrev = roundTwo(yearrev);
+    revenue = roundTwo(revenue);
+    document.getElementById("fillup").innerHTML = "$"+revenue+" per week<div> $"+monthrev+" per month<div> $"+yearrev+" per year<div>";
 }
+function roundTwo(num) {
+	return Math.round(num*100)/100;
+}
+
+function flipBG(style) {
+	if (style === 1) document.body.style.background = "#00f";
+	if (style === 2) document.body.style.background = "#0f0";
+}
+
+	//flipBG(1);
+	//flipBG(2);
+
+
 </script>
 </body>
 </html>
