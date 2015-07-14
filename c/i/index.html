@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>LOL U SCARED BRO?</title>
+<style type="text/css">
+ body {
+ background-color: white;
+ }
+html{
+	 
+	 cursor: none;
+}
+
+
+#spook{
+	top: 0px;
+	left: 0px;
+	position: absolute; 
+	width: 100%;
+	height: 100%;	
+}
+
+#black{
+	top: 0px;
+	left: 0px;
+	position: absolute; 
+	width: 100%;
+	height: 100%;	
+}
+
+</style>
+</head>
+
+<body>
+	
+<!-- Image -->	
+	<img id='white' src="white.png" ></img>
+	<img id='spook' src="scared.jpg" ></img>
+
+<!-- Audio -->
+	<audio id="scary" loop='true' src='screamernoise.mp3'></audio>
+
+<script language = "JavaScript"> 
+
+	window.onbeforeunload = confirmExit;
+	function confirmExit() {
+        return "LEAVING SO SOON BUDDY?";
+    }
+
+	window.onload = spooky;
+	
+function spooky() {
+        
+        document.getElementById('scary').load();
+        document.getElementById('scary').play();
+        document.getElementById('spook').visibility = 'visible';
+        blinkId('spook');
+
+     
+    }
+    
+    function blinkId(id) {
+        
+	var i = document.getElementById(id);
+	var e = document.getElementById('white');
+	if(i.style.visibility=='hidden') {
+		i.style.visibility='visible';
+		e.style.visibility='hidden';
+	} else {
+		i.style.visibility='hidden';
+		e.style.visibility='visible';
+	}
+    setTimeout("blinkId('"+id+"')",50);
+	return true;
+    }
+	
+</script>
+
+</body>
+
+
+</html>
