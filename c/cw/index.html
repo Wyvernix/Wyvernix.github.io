@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+<meta charset="utf-8">
+<title>Super Clicker!</title>
+<link rel="icon" href="dot.ico" type="image/x-icon" />
+<style type="text/css">
+
+body {
+    
+    text-shadow: 1px 1px 10px purple;
+    /*background-color: #47009D;*/
+    background: #1C1C1C;
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+  
+} 
+
+.superclicker {
+    
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);   
+    padding: 10px;
+    padding-bottom: 2px;
+    background-color: #ff1493;
+    color: white;
+    /*text-shadow: none;*/
+    box-shadow: 1px 0px 1px #BE3077, 0px 1px 1px #ff69b4, 2px 1px 1px #BE3077, 1px 2px 1px #ff69b4, 3px 2px 1px #BE3077, 2px 3px 1px #ff69b4, 4px 3px 1px #BE3077, 3px 4px 1px #ff69b4, 5px 4px 1px #BE3077, 4px 5px 1px #ff69b4, 6px 5px 1px #BE3077;
+    cursor: pointer;
+    margin-top: 11px;
+    border: 0px;
+    font-size: 45px;
+    font-weight: normal;
+    font-family: impact, ;
+    outline: 0px;
+    text-shadow: 3px 3px 3px purple;
+    
+}
+
+.superclicker:hover {
+
+    background-color: #E21A62;
+
+}
+
+.superclicker:active{
+
+    box-shadow: 1px 0px 1px #BE3077, 0px 1px 1px #ff69b4, 2px 1px 1px #BE3077, 1px 2px 1px #ff69b4, 3px 2px 1px #BE3077;
+
+}    
+
+.super {
+
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.clicker {
+    
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.counter {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin-top: 2px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Impact, arial;
+    
+}
+
+.grad {
+    
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: #ff5db1; 
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff5db1), to(#ef017c));
+    background: -webkit-linear-gradient(#ff5db1 0%, #ef017c 100%);
+    background: -moz-linear-gradient(#ff5db1 0%, #ef017c 100%);
+    background: -o-linear-gradient(#ff5db1 0%, #ef017c 100%);
+    background: linear-gradient(#ff5db1 0%, #ef017c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#ef017c',GradientType=0 );
+
+    border-style: solid;
+    border-color: #BE3077;
+    border-width:2px;
+    border-radius:2px;
+    width: 100px;
+    height: 50px; 
+
+}
+
+#black {
+    
+    visibility: hidden;
+	top: 50%;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	position: fixed; 
+	min-width: 100%;
+	min-height: 100%;
+    
+}
+
+#sp00k {
+    
+    visibility: hidden;
+	top: 50%;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	position: fixed; 
+	min-width: 100%;
+	min-height: 100%;
+
+}
+
+#twitter-share-button {
+    
+    /*top: 0%;*/
+    /*left: 0%;*/
+    border-style: solid;
+    border-color: #BE3077;
+    border-width:2px;
+    border-radius:2px;
+    width: 100px;
+    height: 50px; 
+    
+}
+
+#clicks {
+    
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    color: white;
+    padding: 10px;
+    padding-bottom: 2px;
+    background-color: #ff1493;
+    box-shadow: 1px 0px 1px #BE3077, 0px 1px 1px #ff69b4, 2px 1px 1px #BE3077, 1px 2px 1px #ff69b4, 3px 2px 1px #BE3077, 2px 3px 1px #ff69b4, 4px 3px 1px #BE3077, 3px 4px 1px #ff69b4, 5px 4px 1px #BE3077, 4px 5px 1px #ff69b4, 6px 5px 1px #BE3077;
+    margin-top: 11px;
+    cursor: auto;
+    border: 0px;
+    font-family: arial;
+    font-size: 20px;
+    outline: 0px;
+    text-shadow: 3px 3px 3px purple;
+
+}
+
+#dot {
+    
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    
+}
+
+#name {
+     
+     position: absolute;
+     display: block;
+     margin-right: -50%;
+     transform: translate(-50%, -50%);
+     top: 95%;
+     left: 0%;
+     text-shadow: none;
+    
+}    
+
+</style>
+</head>
+
+<body>
+
+    <div class="grad"></div>
+    <p id='count' class='counter' style="font-size:40px" > 0 </p>
+     
+    <img src="SUPER.png" class="super" onclick="clicky()"> 
+    <img src="CLICKER.png" class="clicker" onclick="clicky()">
+    
+    <div class="the-button">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="This game is awesome! @superclicker"> Tweet </a>
+    </div>     
+
+    <button id="round" class="superclicker" value="CLICK" onclick="clicky()">CLICK</button>
+    <img class="dot" id='dot' onclick="moveDots()" src="dot.png" height="100" width="150"></img>
+
+    <audio id="scary" loop='true' src='screamernoise.mp3'></audio>
+    <audio id="coin" src='smw_coin.wav' type="audio/wav"></audio>
+    <audio id="1up" src='smw_1-up.wav' type="audio/wav"></audio>
+    
+    <div id="clicks" >
+        CLICKS PER SECOND: <span> 0 </span> <br />
+    </div>
+
+
+    <img id='black' src="black.png"></img>
+    <img id='sp00k' src="creepy.png"></img>
+
+</body>
+
+<script language = "JavaScript">
+
+    
+    
+    var mystery = Math.floor((Math.random() * 90) + 1) +100;
+    
+    window.onbeforeunload = confirmExit;
+    function confirmExit() {
+        return "LEAVING SO SOON BUDDY?";
+    }
+
+    
+    var clicks = 0;  
+    function clicky() {
+    	
+    	clicks++;
+    	document.getElementById('coin').load();
+    	document.getElementById('coin').play();
+    	document.getElementById('count').innerHTML = clicks;
+        
+     	if (clicks === mystery) {
+     		spooky();
+    
+     	}
+     	
+     	moveDots();
+    
+    if (clicks === 5) {
+        document.getElementById("count").style.color = "white";
+        document.body.style.background = "#B40404";
+        
+        }
+    if (clicks === 10) {
+        document.getElementById("count").style.color = "#FF7300";
+        document.body.style.background = "#FF7300";
+        }
+    if (clicks === 20) {
+        document.getElementById("count").style.color = "#FFCB1C";
+        document.body.style.background = "#FFCB1C";
+        }
+    if (clicks === 30) {
+        document.getElementById("count").style.color = "#F7FE2E";
+        document.body.style.background = "#F7FE2E";
+        }    
+    if (clicks === 40) {
+        document.getElementById("count").style.color = "#64FE2E";
+        document.body.style.background = "#64FE2E";
+        }    
+    if (clicks === 50) {
+        document.getElementById("count").style.color = "#01DF74";
+        document.body.style.background = "#01DF74";
+        }
+     if (clicks ===60) {
+        document.getElementById("count").style.color = "#00FFFF";
+        document.body.style.background = "#00FFFF";
+        }       
+     if (clicks === 70) {
+        document.getElementById("count").style.color = "#0080FF";
+        document.body.style.background = "#0080FF";
+        }
+    if (clicks === 80) {
+        document.getElementById("count").style.color = "#8258FA";
+        document.body.style.background = "#8258FA";
+        } 
+    if (clicks === 85) {
+        document.getElementById("count").style.color = "white";
+        document.body.style.background = "#CC2EFA";
+        }   
+    if (clicks === 90) {
+        document.getElementById("count").style.color = "white";
+        document.body.style.background = "#FF0080";
+        }   
+        
+    } 
+    
+    function moveDots() {
+	
+	    if (clicks > 0) {
+	  	
+       document.getElementById('count').innerHTML = clicks;
+	       
+	   var dots = document.getElementById('dot');
+	
+        document.getElementById('dot').style.visibility = 'visible';
+        
+        dots.style.left = Math.floor((Math.random()*75)+10)+'%';
+        dots.style.top = Math.floor((Math.random()*75)+10)+'%';
+        
+	    }
+    }
+    
+    function spooky() {
+    
+        document.getElementById('scary').load();
+        document.getElementById('scary').play();
+        document.getElementById('sp00k').visibility = 'visible';
+        loadcss();
+        blinkId('sp00k');
+     
+    }
+
+    function loadcss(){
+        
+        var fileref = document.createElement("link");
+        fileref.setAttribute("rel", "stylesheet");
+        fileref.setAttribute("type", "text/css");
+        fileref.setAttribute("href", 'new.css');
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+    
+    }
+    
+    function blinkId(id) {
+        
+	var i = document.getElementById(id);
+	var e = document.getElementById('black');
+	if (i.style.visibility=='hidden') {
+		i.style.visibility='visible';
+		e.style.visibility='hidden';
+	} else {
+		i.style.visibility='hidden';
+		e.style.visibility='visible';
+	}
+    setTimeout("blinkId('"+id+"')",50);
+	return true;
+    }
+    
+    var intervals = 0;
+    function clicksi() {
+        if (clicks > 0) {
+            intervals++;
+            var cpm = clicks / intervals;
+            cpm = Math.round(cpm*100);
+            cpm= cpm/100;
+            cpm = cpm*1;
+            var cat = document.getElementById('clicks').getElementsByTagName('span');
+            cat[0].innerHTML = cpm;
+        }
+    }
+  
+    var myVar=setInterval(function () {clicksi()}, 1000);
+
+</script>    
+
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+
+</html>
