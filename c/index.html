@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sniper Clicker</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style type="text/css">
+html{
+	cursor: url(Pointer.gif) 16 16, crosshair;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body {
+	/*background-image: url("Tripoli_cityscape.jpg");*/
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin:50px 0px;
+	padding:0px;
+	text-align:center;
+}
+button {
+	border-style: groove;
+	border-width:4px;
+    border-radius:15px;
+    width: 150px;
+    height: 50px; 
+	color: black;
+	font-weight:normal;
+	text-shadow: 1px 1px 10px #B20000;
+	border-color:#B20000;
+	font-family: Impact, Charcoal, sans-serif;
+	margin: 5px auto;
+}
+#menu {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+#menu2 {
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.buttonStyle {
+	font-size:25px;
+}
+.buttonStyle:hover {
+	color: black;
+	border-style: solid;
+	border-color: white;
+	background-color: #B20000;
+	text-shadow: 1px 1px 10px white;
+}
+.buttonStyle:active {
+	color: black;
+	border-style: solid;
+	border-color: white;
+	background-color: #338950;
+	text-shadow: 1px 1px 10px white;
+}
+.buttonStyle2 {
+	font-size:19px;
+}
+.buttonStyle2:hover {
+	color: black;
+	border-style: solid;
+	border-color: white;
+	background-color: #B20000;
+	text-shadow: 1px 1px 10px white;
+}
+.buttonStyle2:active {
+	color: black;
+	border-style: solid;
+	border-color: white;
+	background-color: #338950;
+	text-shadow: 1px 1px 10px white;
+}
+.buttonStyle3{
+	font-size: 26px;
+
+}
+.buttonStyle3:hover{
+	color: black;
+	border-style: solid;
+	border-color: white;
+	background-color: #B20000;
+	text-shadow: 1px 1px 10px white;
+}
+.buttonStyle3:active{
+	color: black;
+	border-style: solid;
+	border-color: white;
+	background-color: blue;
+	text-shadow: 1px 1px 10px white;
+}
+.boxed {
+	display: none;
+	color:black;
+  	background-color:white;
+  	width: 14em;
+    font-size:19px;
+}
+
+#spooky{
+	visibility: hidden;
+	top: 50%;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	position: fixed; 
+	min-width: 100%;
+	min-height: 100%;
+	
+}
+#black{
+	visibility: hidden;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -2;
+}
+.cp{
+	color: white;
+}
+#dot{
+	visibility: hidden;
+	position: fixed;
+	width: 2px;
+}
+#gameover{
+	visibility : hidden;
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+#noice{
+	visibility : hidden;
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+#noice2{
+	visibility : hidden;
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#noice3{
+	visibility : hidden;
+	position: fixed; 
+	height: 50%;
+	width: 50%;
+	bottom: 25%;
+	left: -12%;
+}
+#noice33{
+	visibility : hidden;
+	position: fixed; 
+	height: 50%;
+	width: 50%;
+	bottom: 25%;
+	right: -12%;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+#noice4{
+	visibility : hidden;
+	position: fixed; 
+	height: 40%;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+#tryagain{
+	visibility: hidden;
+}
+#illboys{
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0; 
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+#background{
+	display: block;
+	position: fixed;
+	z-index: -20;
+	top: 0;
+	left: 0; 
+	min-width: 100%;
+	min-height: 100%;
+}
+#link{
+	color: #B20000;
+	font-size: 18px;
+	display: block;
+	z-index: 20;
+	top: 50%;
+	left: 50%;
+	text-shadow: .5px .5px 1px  white;
+}
+</style>
+</head>
+<body>
+	
+	<a id='link' href='http://goo.gl/forms/hVudmROYDG'>SUBMIT REVIEW HERE</a>
+	
+	<!--Buttons-->
+	<img id='dot' src="reddot.png" onclick='triggerdot()'></img>
+	
+	<img id='spooky' src="spookem.jpg"></img>
+	
+	<img id='black' src="black.png"></img>
+	
+	<img id='gameover' src="black.png"></img>
+	
+	<img id='noice' src="snoop.gif"></img>
+	
+	<img id='noice2' src="money.gif"></img>
+	
+	<img id='noice3' src="noice3.gif"></img>
+	
+	<img id='noice33' src="noice3.gif"></img>
+	
+	<img id='noice4' src="noice4.gif"></img>
+	
+	<img id='background' src="blackbackground.jpg"></img>
+	
+	<img id='illboys' src="illboys.jpg"></img>	
+	
+	
+	<div id='menu'>
+		<button id="start" class="buttonStyle" onclick="startGame()" onmouseover="audioBeep()"> -START- </button><br/>
+		<button id="brief" class="buttonStyle2" onclick="brief()" onmouseover="audioBeep()"> How To Play </button>
+		<button class="boxed" id="mission">Find And Eliminate The Red Dot</button>
+	</div>
+	
+	<div id='menu2'> 
+		<button id="tryagain" class="buttonStyle3" onclick="reload()" onmouseover="audioBeep()">Try Again?</button>
+	</div>
+	
+
+	
+	<!--Audio Clips-->
+	<audio id='50cal'><source src="50cal.mp3" type="audio/mp3"></audio>
+	
+	<audio id='mlgshot'><source src="mlg.mp3" type="audio/mp3"></audio>
+	
+	<audio id='wind' loop='true'><source src="wind.mp3" type="audio/mp3"></audio>
+	
+	<audio id='bird' loop='true'><source src="chirp.mp3" type="audio/mp3"></audio>
+		
+	<audio id='brrapgod' src="brrap.mp3" type="audio/mp3"></audio>
+	
+	<audio id='nuts' src="deezNuts.mp3" type="audio/mp3"></audio>
+	
+	<audio id='nutz' src="deezNutz.ogg" type="audio/ogg"></audio>
+	
+	<audio id='hm' src="hitmarkercut2.ogg" type="audio/ogg"></audio>
+	
+	<audio id='horn' src="horn.ogg" type="audio/ogg"></audio>
+	
+	<audio id='hornloop' loop='true'><source src="horn.ogg" type="audio/ogg"></audio> 
+	
+	<audio id='spookymusic' src="spookyv2.ogg" type="audio/ogg"></audio>
+	
+	<audio id='casing' src="casing.mp3" type="audio/mp3"></audio>
+	
+	<audio id='dank' src="dank.mp3" type="audio/mp3"></audio>
+	
+	<audio id='mix' src="mix.mp3" type="audio/mp3"></audio>
+	
+	<audio id='introSong' autoplay='true' loop='true' src='drums.ogg'></audio>
+	
+	<audio id='sap' loop='true' src='sap.mp3'></audio>
+	
+	<audio id='win' src="win2.mp3" type="audio/mp3"></audio>
+	
+		<!--Test Stuff-->
+	
+	
+	<!--<b onclick="newtabb()" style="visibility: hidden">dont touch</b>-->
+	
+	<p id='spookem3'></p>
+	<script type="text/javascript" src="oldandbusted.js"></script>
+</body>
+</html>
