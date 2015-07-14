@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sellout% - Calculate Ad Revenue</title>
+<link rel="icon" href="../img/yv.ico" type="image/x-icon" />
+<style type="text/css">.yv,.yv2{top:-325px;position:relative}#mainContent,.buttonStyle{font-weight:700;padding:10px}.buttonStyle:active,.buttonStyle:hover{cursor:pointer;border:2px solid #DF0101}body{background-color:#ABFFA9;cursor:url(Pointer.gif)16 16,auto}#mainContent{font-family:Arial,Helvetica,sans-serif;font-size:20px;border-radius:8px;text-align:center}.buttonStyle,.formStyle{font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif}.yv{left:-220px}.yv2{left:220px;-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}.buttonStyle{border-radius:10px;border:2px solid #DF0101;margin:8px auto;background-color:#F2F2F2;color:#DF0101;width:200px}.buttonStyle:hover{background-color:#FFD9D9;color:#DF0101}.buttonStyle:active{background-color:#FAA;color:#DF0101}.formStyle{border-radius:8px;border:2px solid #0A2A0A;padding:5px;margin:20px auto;background-color:#6FB653;font-weight:700;color:#0A2A0A;width:450px}</style>
+</head>
+<body>
+<div id="mainContent">
+<p id="fillup">How much of a Sellout are you?</p>
+<form class="formStyle" id="form1">
+	Average Viewers: <input type="number" id="viewers"/><br>
+	Streams per Week: <input type="number" id="streams"/><br>
+	Hours per Stream: <input type="number" id="hours"/><br>
+	Ads within a Block: <input type="number" id="ads"/><br>
+	Time between Blocks (Min): <input type="number" id="displacement"/><br>
+	<button id="clickMe" class="buttonStyle" type="button">Calculate!</button>
+</form>
+<img src="../img/YV_Passive_Win.gif" /><br>
+<img class="yv" src="../img/Yv_counting.gif" />
+<img class="yv2" src="../img/Yv_counting.gif" /><br>
+</div>
+<script>var butt=document.getElementById("form1");butt.addEventListener('click',doSomething,false);butt.addEventListener('keyup',doSomething,false);function doSomething(){var a=parseFloat(document.getElementById("viewers").value);var b=parseFloat(document.getElementById("streams").value);var c=parseFloat(document.getElementById("hours").value);var d=parseFloat(document.getElementById("ads").value);var e=parseFloat(document.getElementById("displacement").value);if(isNaN(a)||isNaN(b)||isNaN(c)||isNaN(d)||isNaN(e)){return}var f=(a*0.4)*((c*60)/e*d+4);var g=(f*b)/1000*3.5;var h=g/7*30;var i=g/7*365;h=roundTwo(h);i=roundTwo(i);g=roundTwo(g);document.getElementById("fillup").innerHTML="$"+g+" per week<div> $"+h+" per month<div> $"+i+" per year<div>"}function roundTwo(a){return Math.round(a*100)/100}function flipBG(a){if(a===1)document.body.style.background="#00f";if(a===2)document.body.style.background="#0f0"}</script>
+</body>
+</html>
